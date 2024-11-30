@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lazy Caterer's Sequence</title>
+    <title>A000124 of Sloanes OEIS</title>
 </head>
 <body>
-    <h1>Lazy Caterer's Sequence</h1>
+    <h1>A000124 of Sloanes OEIS</h1>
     <p>Masukkan angka untuk menghasilkan urutan sesuai rumus A000124.</p>
     <label for="lazy-input">Masukkan jumlah elemen:</label>
     <input type="number" id="lazy-input" />
-    <button onclick="generateLazyCaterer()">Hasilkan</button>
+    <button onclick="generateSloanesOEIS()">Hasilkan</button>
     <p>Hasil: <span id="lazy-output"></span></p>
 
     <script>
-        function generateLazyCaterer() {
+        function generateSloanesOEIS() {
             const n = document.getElementById('lazy-input').value;
             const result = [];
             for (let i = 0; i < n; i++) {
