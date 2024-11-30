@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dense Ranking</title>
+</head>
+<body>
+    <h1>Dense Ranking</h1>
+    <p>Masukkan skor pemain dan skor GITS untuk menghitung peringkat.</p>
+    <label for="scores">Skor pemain (dipisahkan koma):</label>
+    <input type="text" id="scores" placeholder="100,100,50,40,40,20,10" />
+    <label for="gits-scores">Skor GITS (dipisahkan koma):</label>
+    <input type="text" id="gits-scores" placeholder="5,25,50,120" />
+    <button onclick="calculateRanking()">Hitung Peringkat</button>
+    <p>Hasil: <span id="ranking-output"></span></p>
+
+    <script>
+        function calculateRanking() {
+            const scores = document.getElementById('scores').value.split(',').map(Number);
+            const gitsScores = document.getElementById('gits-scores').value.split(',').map(Number);
+
+            const uniqueScores = [...new Set(scores)].sort((a, b) => b - a);
+            const ranks = gitsScores.map(score => {
+                let rank = 1;
+                for (let uniqueScore of uniqueScores) {
+                    if (score >= uniqueScore) break;
+                    rank++;
+                }
+                return rank;
+            });
+
+            document.getElementById('ranking-output').textContent = ranks.join(", ");
+        }
+    </script>
+</body>
+</html>
