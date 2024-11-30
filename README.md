@@ -17,5 +17,7 @@ Berikut hasil dari program:
 
 ![image](https://github.com/user-attachments/assets/b6bdfa93-5366-49d9-a7bb-d524f006f8f2)
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/1e3ba4b3-487b-4e46-9e3b-5fde63b61161)
+
+
 
